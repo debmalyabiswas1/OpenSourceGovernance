@@ -1,0 +1,289 @@
+﻿,,,,,,,,,,,,,,
+,,RFP Questionnaire,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,Functional requirements for the Open Source Software Scanning Tool,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+ID,Functionality,Sub-functionality,Question,Answer,,,,,,,,,,
+1,Functional - Open Source Scanning,,,,,,,,,,,,,
+1.1,License risk management,How does the product effectively support license detection?,,,,,,,,,,,,
+1.1.1,License risk management,Open source licenses,"How does the product support detection of open source license and identify declared, observed, and effective licenses?                                                                                  3 = The product produces license data about actual included licenses, compatibility information about licenses, and differences in actual licenses versus what developers declare.
+2 = The product produces license data covering two of the three: actual included licenses, compatibility information about licenses, or differences in actual licenses versus what developers declare.
+1 = The product displays one of the three open source license data: actual included licenses, compatibility information about licenses, or differences in actual licenses versus what developers declare.",,,,,,,,,,,
+1.1.2,License risk management,Closed source licenses,"How does the product support detection of closed source license and identify declared, observed, and effective licenses?                                                                     3 = The product supports automatic identification of closed source licenses and includes closed source licenses in a database.
+0 = The product does not support automatic identification of closed source licenses.",,,,,,,,,,,
+1.1.3,License risk management,License explanation,"How does the product provide detailed information about licenses and provide remediation information?                                                                                              3 = The product produces license data about obligation, risk, and remediation.
+2 = The product produces license data covering two of the three: obligation, risk, or remediation.
+1 = The product produces license data covering one of the three: obligation, risk, or remediation.
+0 = No substantial support for license explanation.",,,,,,,,,,,
+1.1.4,License risk management,Programming language support,"Does the product have a broad support of software programming languages regarding license risk management?                                      3 = The product supports 20 or more binary or source code languages for license risk identification (e.g., C/C++, C#, JavaScript, PHP, Java, Ruby, Python).
+2 = The product supports 10 to 20 binary or source code languages for license risk identification.
+1 = The product supports less than 10 binary or source code languages for license risk identification. ",,,,,,,,,,,
+1.1.5,License risk management,Reporting capabilities,"How does the product support reporting on licenses (e.g., by time frames, application, application type, etc.)?                                            3 = The product produces license reports that allow users to specify time frames, application, and organization.
+2 = The product produces license reports that allow two of the three: users to specify time frames, application, or organization.
+1 = The product produces license reports that allow one of the three: users to specify time frames, application, or organization.
+0 = No substantial support for reporting.",,,,,,,,,,,
+1.1.6,License risk management,Audit reporting,"How effectively does the product produce specific audit reports? 1 point is given for each of the following up to a possible score of 5:
+- The product supports exportable request approval history for licenses including changes, approval date/time and requestor, and result.
+- The product supports exportable application license history including details of current licenses and delta between licenses.
+- The product supports creating a report for license obligations for a particular application.
+- The product supports creating a report for license compatibility for a particular application.
+- The product supports creating a report for packages with encryption for a particular application.",,,,,,,,,,,
+1.1.7,License risk management,Bill of Materials,"How does the product provide a report detailing Bill of Materials (BOM) for an application?                                                                     1 point is given for each of the following up to a possible score of 4:
+- BOM report/dashboard is exportable to HTML, Excel, or CSV.
+- BOM contains component name, the type of file, and version number of the open source components.
+- Historical BOMs are retrievable based on application version number.
+- BOM includes information on the full list of dependencies including transitive dependencies.",,,,,,,,,,,
+1.2,Vulnerability detection and management,How effective is the product with open source security vulnerability detection and management?,,,,,,,,,,,,
+1.2.1,Vulnerability detection and management,Proactive vulnerability detection,"How does the product monitor for and support proactive notification of newly identified open source vulnerabilities after an application has moved into the production environment?                                               3 = The product has the ability to perform scheduled scans in production or to update automatically to show only newly identified vulnerabilities.
+2 = The product has integration with third-party tools or APIs, which can be used to schedule a scan to show only newly identified vulnerabilities.
+1 = The product can be scheduled to run a scan in production environment via API to find newly identified vulnerabilities.
+0 = There is no substantial support for proactive vulnerability identification.",,,,,,,,,,,
+1.2.2,Vulnerability detection and management,Knowledgebase,"How does the product support multiple sources of vulnerability information, and is the information modified in any way?                                              3 = The product uses vulnerability data from at least three feeds, including the NVD, and the product's research team adds any additional information such as detailed explanation of the issue, mitigation solutions, a CVSS score, and a CWE classification.
+2 = The product uses vulnerability data from at least three feeds, including the NVD.
+1 = The product passes on information from the NVD.
+0 = There is no substantial support for vulnerability information.",,,,,,,,,,,
+1.2.3,Vulnerability detection and management,Traceability,"How does the product provide the ability to trace specific versions of licenses or vulnerabilities to applications and report on component age, popularity, and number of versions?                                                       3 = The product has ability to search for a particular component version or vulnerability name and report on which applications contain the component version and have a component drill down that shows two or more components of the following: risk severity, popularity, or number of versions in use.
+2 = The product has ability to sort a dashboard or have a report to show components by two or more of the following: risk severity, popularity, or number of versions in use.
+1 = The product has ability to sort a dashboard or have a report to show components by risk severity, popularity, or number of versions in use.
+0 = No substantial support for traceability.",,,,,,,,,,,
+1.2.4,Vulnerability detection and management,Programming language support,"Does the product have a broad support of software programming languages regarding vulnerability detection?                                         3 = The product supports 20 or more binary or source code languages for vulnerability detection (e.g., C/C++, C#, JavaScript, PHP, Java, Ruby, and Python).
+2 = The product supports 10 to 20 binary or source code languages for vulnerability detection.
+1 = The product supports less than 10 binary or source code languages for vulnerability detection.",,,,,,,,,,,
+1.2.5,Vulnerability detection and management,Completeness,"How does the product deal with software components that are unknown?                                                                                                3 = The product has the ability to seamlessly integrate with other scanners to evaluate the code such as static analysis.
+2 = The product has ability to categorize unknown components and associate with other similar unknown components automatically.
+1 = The product out of the box flags unknown components, but the user must manually label unknown code.
+0 = There is no substantial support for data precision.",,,,,,,,,,,
+1.3,SDLC Integration,How does the product integrate into an automated SDLC?,,,,,,,,,,,,
+1.3.1,SDLC Integration,Scaninng,"How does the product support integration with developer tools in the SDLC?                                                                                                     3 = The product is able to integrate with source code repositories (e.g., Git, Artifactory, Nexus) to mark unsafe source code components.
+2 = The product is able to integrate with CI/CD automation tools (e.g. Jenkins, Bamboo, Maven, Gradle) to indicate unsafe source code components.
+1 = The product is able to integrate with IDE/Notebooks (e.g. Eclipse, Jupyter) to indicate unsafe source code components.
+0 = There is no substantial SDLC integration.",,,,,,,,,,,
+1.3.2,SDLC Integration,Partial Scanning,"How does the product support partial scanning, e.g., can the product identify partial or modified components and perform scanning of only the modified components?                                                                                                 3 = The product is able to detect modified components and perform partial scanning only on changed components.
+2 = The product is able to detect snippets or similar open source components as a method of performing partial scanning.
+1 = The product is able to detect modified components through an integration with another product.
+0 = There is no substantial support for partial scanning.",,,,,,,,,,,
+1.3.3,SDLC Integration,Container Support,"Does the product support scanning of containers throughout the SDLC?                                                                                                     1 = The product supports scanning of Docker container images.
+0 = The product does not support scanning of container images.",,,,,,,,,,,
+1.3.4,SDLC Integration,APIs support,"What is the ability to extend and control the product with APIs?                     3 = The product documents SOAP or REST APIs that cover full SCA functionality and supports publicly available SDK (set of APIs, documentation, test cases, etc.).
+2 = The product documents SOAP or REST APIs that cover full SCA functionality.
+1 = The product documents SOAP or REST APIs that cover partial SCA functionality such as scanning or reporting.
+0 = There is no substantial support for API coverage.",,,,,,,,,,,
+1.4,Policy Management,How does the product implement policies?,,,,,,,,,,,,
+1.4.1,Policy Management,Blacklisting and whitelisting of licenses                                                                                      ,"How does the product support blacklisting and whitelisting of licenses?                                                                                                    3 = The product has automatic blacklisting and whitelisting policies for licenses and license types and workflow for license review.
+2 = The product has automatic blacklisting or whitelisting policies for licenses and license types.
+1 = The product has workflow for license review.
+0 = There is no substantial support for blacklisting and whitelisting of licenses.",,,,,,,,,,,
+1.4.2,Policy Management,Blacklisting and whitelisting of components                                                                                      ,"How does the product support blacklisting and whitelisting of components?                                                                                            3 = The product has automatic blacklisting and whitelisting policies for components and versions of components.
+2 = The product has automatic blacklisting or whitelisting policies for components and versions of components.
+1 = The product makes use of custom policies based on severity count levels or manually created blacklists and/or whitelists.
+0 = There is no substantial support for blacklisting and whitelisting of components.",,,,,,,,,,,
+1.4.3,Policy Management,Policy editor,"How can policies be created to support different types of applications and levels of security risk, types of licenses, including different categories of applications, specific business units, proprietary components, and customized metadata?                                                                                           1 point is given for each of the following up to a possible score of 5:
+- Policies based on different categories of applications.
+- Policies based on business unit/team.
+- Custom creation of policies based on custom metadata.
+- Policies based on security risk/severity level.
+- Policies based on component or license type, e.g., proprietary, GNU, and web server.",,,,,,,,,,,
+1.4.4,Policy Management,SDLC policies,"How can policies be created to support different actions at different stages of the SDLC?                                                                                           3 = The product has support for a single policy to have different actions depending on where a violation has been detected in the SDLC.
+2 = The product has support multiple policies to be applied for different phases of the SDLC.
+1 = The product makes use of integrations to integrate a single policy into repositories, IDEs, build and production environments.
+0 = There is no substantial support for SDLC policy support.",,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,How does the product provide a report detailing bill of materials (BOM) for an application?,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
